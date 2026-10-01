@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>⏳ باقي على الجيش...</title>
+
+  <!-- Emoji Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪖</text></svg>" />
+
+  <!-- Open Graph / WhatsApp Preview -->
+  <meta property="og:title" content="باقي على الجيش... ⏳" />
+  <meta property="og:description" content="عداد تنازلي لأحلى أيام العمر 🫡 — 13 أكتوبر 2026" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ar_EG" />
+  <meta name="description" content="عداد تنازلي لأحلى أيام العمر — يوم التجنيد 13 أكتوبر 2026 🫡" />
+  <meta name="theme-color" content="#1a1f16" />
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== الشاشة الرئيسية ===== -->
+  <main id="main-screen">
+
+    <!-- خلفية حبيبات -->
+    <div class="grain-overlay"></div>
+
+    <!-- العنوان -->
+    <header class="hero">
+      <h1 id="main-title">باقي على الجيش<span class="dots">...</span></h1>
+      <p class="target-date">١٣ أكتوبر ٢٠٢٦</p>
+      <p class="mood-text" id="mood-text"></p>
+    </header>
+
+    <!-- العداد -->
+    <section class="countdown" id="countdown" aria-label="العداد التنازلي">
+      <div class="time-unit" id="unit-days">
+        <span class="time-value" id="days">000</span>
+        <span class="time-label">يوم</span>
+      </div>
+      <div class="time-separator">:</div>
+      <div class="time-unit" id="unit-hours">
+        <span class="time-value" id="hours">00</span>
+        <span class="time-label">ساعة</span>
+      </div>
+      <div class="time-separator">:</div>
+      <div class="time-unit" id="unit-minutes">
+        <span class="time-value" id="minutes">00</span>
+        <span class="time-label">دقيقة</span>
+      </div>
+      <div class="time-separator">:</div>
+      <div class="time-unit" id="unit-seconds">
+        <span class="time-value" id="seconds">00</span>
+        <span class="time-label">ثانية</span>
+      </div>
+    </section>
+
+    <!-- بروجرس بار الحرية -->
+    <section class="freedom-bar-section">
+      <div class="freedom-label">
+        <span>🕊️ نسبة الحرية المتبقية</span>
+        <span id="freedom-pct">0%</span>
+      </div>
+      <div class="freedom-track">
+        <div class="freedom-fill" id="freedom-fill"></div>
+      </div>
+    </section>
+
+    <!-- الجملة الكوميدية -->
+    <section class="quote-section">
+      <p class="quote" id="rotating-quote">"..."</p>
+    </section>
+
+    <!-- قائمة الوداع -->
+    <section class="checklist-section">
+      <h2>📋 آخر حاجات لازم أعملها قبل ما أمشي</h2>
+      <ul class="checklist" id="checklist">
+        <li>
+          <label><input type="checkbox" data-key="item-0" /> 🍛 آخر أكلة كشري من عند أبو طارق</label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-key="item-1" /> 😴 آخر نومة كاملة لحد الضهر من غير منبه</label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-key="item-2" /> 🖥️ أودّع الـ PC وأمسح الهيستوري</label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-key="item-3" /> 📱 أصور سيلفي مع شعري قبل ما يروح</label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-key="item-4" /> 🎮 آخر جيمة أونلاين مع الشباب</label>
+        </li>
+        <li>
+          <label><input type="checkbox" data-key="item-5" /> 👟 أبقى أجيب شبشب كويس للمعسكر</label>
+        </li>
+      </ul>
+    </section>
+
+    <!-- زرار المشاركة -->
+    <button class="share-btn" id="share-btn" aria-label="مشاركة الرابط">
+      <span class="share-icon">🔗</span> ابعت لصاحبك يتشفى فيك
+    </button>
+
+    <footer class="footer">
+      <p>صُنع بكل حزن وسخرية 🫡</p>
+    </footer>
+
+  </main>
+
+  <!-- ===== شاشة النهاية ===== -->
+  <div id="end-screen" class="end-screen hidden">
+    <div class="end-content">
+      <p class="end-salute">🫡</p>
+      <h1 class="end-title">اتفضل يا دفعة</h1>
+      <p class="end-subtitle">يلا يا معلم، البلد محتاجاك</p>
+      <div class="end-stars">⭐ ⭐ ⭐</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
